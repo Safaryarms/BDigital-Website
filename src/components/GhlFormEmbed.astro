@@ -1,0 +1,18 @@
+---
+// Rechterkolom van de Intake-CTA: GoHighLevel form/survey-embed.
+// De embedcode komt uit één plek (src/config.ts / env GHL_FORM_EMBED) en geldt voor alle pagina's.
+import { GHL_FORM_EMBED } from '../config';
+
+const embed = GHL_FORM_EMBED.trim();
+---
+<div id="intake-form" style="flex:1 1 440px;min-width:0;background:#151515;border:1px solid #2A2A2A;border-radius:20px;padding:clamp(22px,3vw,34px);display:flex;flex-direction:column;gap:20px;scroll-margin-top:90px">
+  {embed ? (
+    <div class="ghl-embed"><Fragment set:html={embed} /></div>
+  ) : (
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:30px 0">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#C5FF27">Intake</span>
+      <h3 style="margin:0;font-size:26px;font-weight:800">Formulier volgt</h3>
+    </div>
+  )}
+  <p style="margin:0;font-size:13px;line-height:1.55;color:#9E9E97">We gebruiken deze informatie uitsluitend om jouw aanvraag te beoordelen en nemen geen gegevens automatisch op in marketingcampagnes zonder passende toestemming.</p>
+</div>

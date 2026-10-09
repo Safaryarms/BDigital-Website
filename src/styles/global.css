@@ -1,0 +1,37 @@
+html{scroll-behavior:smooth}
+body{margin:0;background:#0B0B0B;color:#0B0B0B;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit}
+:focus-visible{outline:3px solid #8B6CFF;outline-offset:3px;border-radius:8px}
+input,textarea,select,button{font-family:inherit}
+img{max-width:100%}
+[id]{scroll-margin-top:70px}
+summary::-webkit-details-marker{display:none}
+@keyframes bd-spin{to{transform:rotate(360deg)}}
+.bd-badge{animation:bd-spin 22s linear infinite}
+
+/* Header: breekpunt 1020px */
+.desk-only{display:flex}
+.mobile-only,.mobile-menu{display:none}
+@media (max-width:1019.98px){
+  .desk-only{display:none}
+  .mobile-only{display:inline-block}
+  .mobile-menu:not([hidden]){display:flex}
+}
+/* Verticale zijtekst hero alleen >= 1380px */
+.only-wide{display:none}
+@media (min-width:1380px){.only-wide{display:contents}}
+
+/* Case-drawer */
+.case-drawer [data-case-panel]:not([hidden]){display:flex}
+body.no-scroll{overflow:hidden}
+
+/* Foto-placeholder (tot de klant echte foto's levert) */
+.photo-slot{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;background:color-mix(in srgb,currentColor 4%,transparent);border:1px dashed color-mix(in srgb,currentColor 35%,transparent);color:inherit;font-size:13px;font-weight:600;line-height:1.4}
+.photo-slot>*{opacity:.7}
+
+/* GoHighLevel-embed */
+.ghl-embed iframe{width:100%;border:0;display:block}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

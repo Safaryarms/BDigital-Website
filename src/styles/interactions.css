@@ -1,0 +1,29 @@
+/* Generated from the design hover/focus states. Inline styles win, hence !important. */
+@media (hover:hover){.h0:hover{transform:translateY(-2px) !important}}
+.h0:focus-visible{transform:translateY(-2px) !important}
+@media (hover:hover){.h1:hover{border-color:#fff !important}}
+.h1:focus-visible{border-color:#fff !important}
+@media (hover:hover){.h2:hover{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(11,11,11,.14) !important}}
+.h2:focus-visible{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(11,11,11,.14) !important}
+@media (hover:hover){.h3:hover{transform:translate(3px,-3px) !important}}
+.h3:focus-visible{transform:translate(3px,-3px) !important}
+@media (hover:hover){.h4:hover{gap:16px !important}}
+.h4:focus-visible{gap:16px !important}
+@media (hover:hover){.h5:hover{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(11,11,11,.12) !important}}
+.h5:focus-visible{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(11,11,11,.12) !important}
+@media (hover:hover){.h6:hover{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(11,11,11,.25) !important}}
+.h6:focus-visible{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(11,11,11,.25) !important}
+@media (hover:hover){.h7:hover{transform:translateY(-6px) !important;border-color:#4A4A4A !important}}
+.h7:focus-visible{transform:translateY(-6px) !important;border-color:#4A4A4A !important}
+@media (hover:hover){.h8:hover{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(11,11,11,.1) !important}}
+.h8:focus-visible{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(11,11,11,.1) !important}
+@media (hover:hover){.h9:hover{color:#C5FF27 !important}}
+.h9:focus-visible{color:#C5FF27 !important}
+@media (hover:hover){.h10:hover{transform:translateY(-8px) rotate(0deg) !important}}
+.h10:focus-visible{transform:translateY(-8px) rotate(0deg) !important}
+@media (hover:hover){.h11:hover{transform:translateY(-6px) !important}}
+.h11:focus-visible{transform:translateY(-6px) !important}
+@media (hover:hover){.h12:hover{transform:translateX(6px) !important}}
+.h12:focus-visible{transform:translateX(6px) !important}
+@media (hover:hover){.h13:hover{transform:translateY(-4px) !important}}
+.h13:focus-visible{transform:translateY(-4px) !important}

@@ -1,0 +1,31 @@
+---
+interface Props {
+  page: 'home' | 'diensten' | 'aanpak' | 'over';
+}
+const { page } = Astro.props;
+const nav = [
+  { key: 'diensten', href: '/diensten/', label: 'Diensten' },
+  { key: 'aanpak', href: '/aanpak/', label: 'Aanpak' },
+  { key: 'over', href: '/over-ons/', label: 'Over BDigital' },
+  { key: 'contact', href: '#intake', label: 'Contact' },
+];
+const cta = page === 'home' ? 'Start je project' : 'Plan een kennismaking';
+---
+<header style="background:#0B0B0B;color:#fff;position:sticky;top:0;z-index:40;border-bottom:1px solid #1E1E1E">
+  <div style="max-width:1240px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href={page === 'home' ? '#top' : '/'} aria-label="BDigital home" style="display:flex;align-items:center"><img src="/assets/logo-wordmark.png" alt="BDigital" width="120" height="30" style="height:30px;width:auto;display:block;mix-blend-mode:lighten"></a>
+    <nav class="desk-only" aria-label="Hoofdmenu" style="gap:28px;font-size:14px;font-weight:600">
+      {nav.map((n) => (
+        <a href={n.href} class="h9" aria-current={n.key === page ? 'page' : undefined} style={`color:${n.key === page ? '#C5FF27' : '#E8E8E3'};transition:color .2s`}>{n.label}</a>
+      ))}
+    </nav>
+    <a href="#intake" class="desk-only h0" style="align-items:center;gap:10px;background:#C5FF27;color:#0B0B0B;font-weight:700;font-size:14px;padding:12px 18px;border-radius:999px;transition:transform .2s;white-space:nowrap">{cta} <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+    <button type="button" class="mobile-only" data-menu-toggle aria-expanded="false" aria-controls="mobiel-menu" aria-label="Menu" style="background:none;border:1.5px solid #3A3A3A;color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer">Menu</button>
+  </div>
+  <nav id="mobiel-menu" class="mobile-menu" aria-label="Mobiel menu" hidden style="flex-direction:column;gap:4px;padding:8px clamp(20px,4vw,48px) 24px;font-size:20px;font-weight:700">
+    {nav.map((n) => (
+      <a href={n.href} data-menu-close aria-current={n.key === page ? 'page' : undefined} style={`padding:10px 0;border-bottom:1px solid #1E1E1E${n.key === page ? ';color:#C5FF27' : ''}`}>{n.label}</a>
+    ))}
+    <a href="#intake" data-menu-close style="margin-top:14px;align-self:flex-start;background:#C5FF27;color:#0B0B0B;font-size:15px;padding:14px 20px;border-radius:999px">{cta}</a>
+  </nav>
+</header>
